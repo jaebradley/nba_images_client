@@ -1,0 +1,15 @@
+cairocffi==0.8.0
+CairoSVG==2.0.3
+certifi==2017.7.27.1
+cffi==1.10.0
+chardet==3.0.4
+cssselect==1.0.1
+idna==2.5
+lxml==3.8.0
+olefile==0.44
+Pillow==4.2.1
+pycparser==2.18
+requests==2.18.3
+tinycss==0.4
+urllib3==1.22
+Willow==1.0
