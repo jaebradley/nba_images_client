@@ -10,11 +10,11 @@ from nba_images_client.models import FileType, ImageDimensions
 
 def convert_from_svg_to_png(data):
     # apparently, you need to name these files for the conversion to work
-    with tempfile.NamedTemporaryFile(prefix=uuid.uuid4().hex, suffix=".svg") as svg_file:
+    with tempfile.NamedTemporaryFile(prefix=uuid.uuid4().hex, suffix='.svg') as svg_file:
         # write data to temporary svg file
         svg_file.write(data)
         svg_file.seek(0)
-        with tempfile.NamedTemporaryFile(prefix=uuid.uuid4().hex, suffix=".png") as png_file:
+        with tempfile.NamedTemporaryFile(prefix=uuid.uuid4().hex, suffix='.png') as png_file:
             # draw png from svg file
             renderPM.drawToFile(svg2rlg(svg_file.name), png_file.name)
             png_file.seek(0)
@@ -22,7 +22,7 @@ def convert_from_svg_to_png(data):
 
 
 def resize_image(png_data, file_type=FileType.PNG, image_dimensions=ImageDimensions(100, 100)):
-    with tempfile.NamedTemporaryFile(prefix=uuid.uuid4().hex, suffix=".png") as png_file:
+    with tempfile.NamedTemporaryFile(prefix=uuid.uuid4().hex, suffix='.png') as png_file:
         png_file.write(png_data)
         png_file.seek(0)
         image = Image.open(png_file)
