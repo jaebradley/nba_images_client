@@ -3,7 +3,7 @@ setup(
   name="nba_images_client",
   packages=find_packages(exclude=["tests*"]),
   install_requires=["requests", "Willow", "reportlab", "svglib"],
-  version="0.0.2",
+  version="0.0.1",
   description="NBA Images Client",
   author="Jae Bradley",
   author_email="jae.b.bradley@gmail.com",
