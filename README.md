@@ -1,5 +1,7 @@
 # NBA Images Client
 
+[![Build Status](https://travis-ci.org/jaebradley/nba_images_client.svg?branch=master)](https://travis-ci.org/jaebradley/nba_images_client)
+
 ## Introduction
 A Python client to retrieve team logo and player head shot images from NBA.com
 

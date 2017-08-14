@@ -1,6 +1,8 @@
 NBA Images Client
 =================
 
+|Build Status|
+
 Introduction
 ------------
 
@@ -48,3 +50,6 @@ dimensions are ``260x190``.
 
     # Get a 400x400 JPG of Isaiah Thomas' head shot in bytes
     isaiah_thomas_head_shot_400_by_400_jpg = NbaImagesClient.get_player_head_shot(player_id=202738, file_type=FileType.JPG, image_dimensions=ImageDimensions(height=400, length=400))
+
+.. |Build Status| image:: https://travis-ci.org/jaebradley/nba_images_client.svg?branch=master
+   :target: https://travis-ci.org/jaebradley/nba_images_client
