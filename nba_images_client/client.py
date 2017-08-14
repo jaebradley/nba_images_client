@@ -1,6 +1,6 @@
 import requests
 
-from nba_images_client.converters import convert_from_svg_to_png, resize_image
+from nba_images_client.utilities import convert_from_svg_to_png, resize_image
 from nba_images_client.models import Team, FileType, ImageDimensions
 
 
