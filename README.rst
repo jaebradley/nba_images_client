@@ -26,10 +26,10 @@ are ``150x150``.
 
     from nba_images_client import NbaImagesClient, Team, FileType, ImageDimensions
 
-    // Get a 150x150 PNG of the Boston Celtics logo in bytes
+    # Get a 150x150 PNG of the Boston Celtics logo in bytes
     default_celtics_logo = NbaImagesClient.get_team_logo(team=Team.BOSTON_CELTICS)
 
-    // Get a 400x400 JPG of the Boston Celtics logo in bytes
+    # Get a 400x400 JPG of the Boston Celtics logo in bytes
     celtics_logo_400_by_400_jpg = NbaImagesClient.get_team_logo(team=Team.BOSTON_CELTICS, file_type=FileType.JPG, image_dimensions=ImageDimensions(height=400, length=400))
 
 Get A Player's Head Shot
@@ -43,8 +43,8 @@ dimensions are ``260x190``.
 
     from nba_images_client import NbaImagesClient, Team, FileType, ImageDimensions
 
-    // Get a PNG of Isaiah Thomas' head shot in bytes
+    # Get a PNG of Isaiah Thomas' head shot in bytes
     isaiah_thomas_head_shot = NbaImagesClient.get_player_head_shot(player_id=202738)
 
-    // Get a 400x400 JPG of Isaiah Thomas' head shot in bytes
+    # Get a 400x400 JPG of Isaiah Thomas' head shot in bytes
     isaiah_thomas_head_shot_400_by_400_jpg = NbaImagesClient.get_player_head_shot(player_id=202738, file_type=FileType.JPG, image_dimensions=ImageDimensions(height=400, length=400))
