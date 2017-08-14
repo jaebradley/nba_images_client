@@ -16,7 +16,7 @@ def convert_from_svg_to_png(data):
         svg_file.seek(0)
         with tempfile.NamedTemporaryFile(prefix=uuid.uuid4().hex, suffix='.png') as png_file:
             # draw png from svg file
-            renderPM.drawToFile(svg2rlg(svg_file.name), png_file.name)
+            renderPM.drawToFile(svg2rlg(svg_file.name), png_file.name, fmt='PNG')
             png_file.seek(0)
             return png_file.read()
 
@@ -26,7 +26,7 @@ def resize_image(png_data, file_type=FileType.PNG, image_dimensions=ImageDimensi
         png_file.write(png_data)
         png_file.seek(0)
         image = Image.open(png_file)
-        image = image.resize((image_dimensions.height, image_dimensions.length))
+        image = image.resize((image_dimensions.length, image_dimensions.height))
         with tempfile.NamedTemporaryFile(prefix=uuid.uuid4().hex, suffix=FileType.get_extension(file_type)) as resized_file:
             if file_type == FileType.PNG:
                 image.save_as_png(resized_file)
@@ -37,3 +37,4 @@ def resize_image(png_data, file_type=FileType.PNG, image_dimensions=ImageDimensi
 
             resized_file.seek(0)
             return resized_file.read()
+
